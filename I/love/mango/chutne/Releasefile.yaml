@@ -8,18 +8,10 @@ kind: Templates
 metadata:
   home: i
 spec:
-- template: i_temp
+- template: chutney_temp
   scheduledStartDate: 2023-09-27T09:00:00+02:00
   phases:
   - phase: New Phase
   riskProfile: Default risk profile
   author: admin
-  defaultTargetFolder: ./
----
-apiVersion: xl-release/v1
-kind: Import
-metadata:
-  home: i
-spec:
-  imports:
-  - love/Releasefile.yaml
+  defaultTargetFolder: ./love/mango/chutne
