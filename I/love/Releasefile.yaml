@@ -22,4 +22,4 @@ metadata:
   home: i
 spec:
   imports:
-  - /love/mango/Releasefile.yaml
+  - mango/Releasefile.yaml
