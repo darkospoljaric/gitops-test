@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Wed Sep 27 12:51:19 CEST 2023
+# Date created:         Wed Sep 27 15:53:15 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -8,18 +8,14 @@ kind: Templates
 metadata:
   home: i
 spec:
-- template: love_Temp
-  scheduledStartDate: 2023-09-27T09:00:00+02:00
-  phases:
-  - phase: New Phase
-  riskProfile: Default risk profile
-  author: admin
-  defaultTargetFolder: ./love
----
-apiVersion: xl-release/v1
-kind: Import
-metadata:
-  home: i
-spec:
-  imports:
-  - mango/Releasefile.yaml
+- directory: I
+  children:
+  - directory: love
+    children:
+    - template: love_Temp
+      scheduledStartDate: 2023-09-27T09:00:00+02:00
+      phases:
+      - phase: New Phase
+      riskProfile: Default risk profile
+      author: admin
+      defaultTargetFolder: ./love
