@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Wed Sep 27 11:54:14 CEST 2023
+# Date created:         Wed Sep 27 11:56:43 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -15,3 +15,11 @@ spec:
   riskProfile: Default risk profile
   author: admin
   defaultTargetFolder: ./love
+---
+apiVersion: xl-release/v1
+kind: Import
+metadata:
+  home: i
+spec:
+  imports:
+  - /love/mango/Releasefile.yaml
