@@ -1,27 +1,13 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Thu Sep 28 11:18:54 CEST 2023
+# Date created:         Thu Sep 28 14:33:05 CEST 2023
 
 ---
 apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: i
-spec:
-- directory: love
-  children:
-  - template: love_template
-    scheduledStartDate: 2023-09-28T09:00:00+02:00
-    phases:
-    - phase: New Phase
-    riskProfile: Default risk profile
-    author: admin
-    defaultTargetFolder: ./love
----
-apiVersion: xl-release/v1
 kind: Import
-metadata:
-  home: i
 spec:
   imports:
+  - Patterns.yaml
+  - Templates.yaml
+  - Variables.yaml
   - mango/Releasefile.yaml

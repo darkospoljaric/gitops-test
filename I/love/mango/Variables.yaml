@@ -1,0 +1,17 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Thu Sep 28 14:33:05 CEST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: i
+spec:
+- directory: love
+  children:
+  - directory: mango
+    children:
+    - folderVariables:
+      - type: xlrelease.StringVariable
+        key: folder.mango_var

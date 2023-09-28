@@ -4,9 +4,11 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: i
 spec:
-  imports:
-  - Patterns.yaml
-  - Templates.yaml
-  - Variables.yaml
+- pattern: i_pat
+  stages:
+  - stage: aa
+  - stage: "44"

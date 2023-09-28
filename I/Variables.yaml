@@ -4,9 +4,10 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: i
 spec:
-  imports:
-  - Patterns.yaml
-  - Templates.yaml
-  - Variables.yaml
+- folderVariables:
+  - type: xlrelease.StringVariable
+    key: folder.i_var

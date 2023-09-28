@@ -4,9 +4,14 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: i
 spec:
-  imports:
-  - Patterns.yaml
-  - Templates.yaml
-  - Variables.yaml
+- directory: love
+  children:
+  - directory: mango
+    children:
+    - pattern: mango_pat
+      stages:
+      - stage: sdg
