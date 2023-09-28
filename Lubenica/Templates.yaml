@@ -1,0 +1,32 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Thu Sep 28 13:12:32 CEST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: lubenica
+spec:
+- template: lubenica_templa
+  scheduledStartDate: 2023-09-28T09:00:00+02:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: aa
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./
+- directory: kostica
+  children:
+  - template: kostica_template
+    scheduledStartDate: 2023-09-25T09:00:00+02:00
+    phases:
+    - phase: New Phase
+      tasks:
+      - name: f
+        type: xlrelease.Task
+    riskProfile: Default risk profile
+    author: admin
+    defaultTargetFolder: ./kostica
