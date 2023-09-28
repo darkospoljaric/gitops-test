@@ -1,6 +1,6 @@
-# Exported from:        http://Darkos-MBP.home:5516/
+# Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Wed Sep 27 12:51:19 CEST 2023
+# Date created:         Thu Sep 28 11:18:54 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -8,13 +8,17 @@ kind: Templates
 metadata:
   home: i
 spec:
-- template: mango_temp
-  scheduledStartDate: 2023-09-27T09:00:00+02:00
-  phases:
-  - phase: New Phase
-  riskProfile: Default risk profile
-  author: admin
-  defaultTargetFolder: ./love/mango
+- directory: love
+  children:
+  - directory: mango
+    children:
+    - template: mango_template
+      scheduledStartDate: 2023-09-28T09:00:00+02:00
+      phases:
+      - phase: New Phase
+      riskProfile: Default risk profile
+      author: admin
+      defaultTargetFolder: ./love/mango
 ---
 apiVersion: xl-release/v1
 kind: Import
@@ -22,4 +26,4 @@ metadata:
   home: i
 spec:
   imports:
-  - chutne/Releasefile.yaml
+  - chutney/Releasefile.yaml
