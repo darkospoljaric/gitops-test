@@ -1,13 +1,7 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Fri Sep 29 16:04:40 CEST 2023
+# Date created:         Fri Sep 29 16:18:20 CEST 2023
 
----
-apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: Aa
-spec: []
 ---
 apiVersion: xl-release/v1
 kind: Permissions

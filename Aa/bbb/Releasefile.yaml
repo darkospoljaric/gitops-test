@@ -4,28 +4,11 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: Aa
-spec:
-- directory: bb
-- directory: bbb
----
-apiVersion: xl-release/v1
-kind: Import
-metadata:
-  home: aa
-spec:
-  imports:
-  - bb/Releasefile.yaml
-  - bbb/Releasefile.yaml
----
-apiVersion: xl-release/v1
 kind: Permissions
 metadata:
   home: aa
 spec:
-- directory: "."
+- directory: bbb
   teams:
   - name: Template Owner
     users:
