@@ -8,7 +8,9 @@ kind: Templates
 metadata:
   home: Aa
 spec:
-- directory: cc
+- directory: bb
+  children:
+  - directory: cc
 ---
 apiVersion: xl-release/v1
 kind: Import
