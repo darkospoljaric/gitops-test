@@ -6,42 +6,27 @@
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: Aa
-spec:
-- directory: bbb
-- directory: bb
----
-apiVersion: xl-release/v1
-kind: Import
-metadata:
   home: aa
 spec:
-  imports:
-  - bbb/Releasefile.yaml
-  - bb/Releasefile.yaml
+- directory: bb
+  children:
+  - directory: cc
+    children:
+    - template: cc_under_bb
+      scheduledStartDate: 2023-10-02T09:00:00+02:00
+      phases:
+      - phase: New Phase
+      riskProfile: Default risk profile
+      author: admin
+      defaultTargetFolder: ./bb/cc
 ---
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
   home: aa
 spec:
-- directory: "."
+- directory: bb/cc
   teams:
-  - name: Template Owner
-    users:
-    - admin
-    permissions:
-    - template#create_release_other_folder
-    - template#edit
-    - trigger#view_trigger
-    - template#lock_task
-    - template#view
-    - folder#view
-    - template#edit_security
-    - template#create_release
-    - template#edit_triggers
-    - template#edit_precondition
-    - template#edit_failure_handler
   - name: Folder Owner
     users:
     - admin
@@ -97,3 +82,18 @@ spec:
     - release#edit_blackout
     - release#edit_failure_handler
     - release#abort
+  - name: Template Owner
+    users:
+    - admin
+    permissions:
+    - template#create_release_other_folder
+    - template#edit
+    - trigger#view_trigger
+    - template#lock_task
+    - template#view
+    - folder#view
+    - template#edit_security
+    - template#create_release
+    - template#edit_triggers
+    - template#edit_precondition
+    - template#edit_failure_handler
