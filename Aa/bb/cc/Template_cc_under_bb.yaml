@@ -1,0 +1,18 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Wed Oct 04 09:33:16 CEST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: aa/bb/cc
+spec:
+- template: cc_under_bb
+  scheduledStartDate: 2023-10-02T09:00:00+02:00
+  dueDate: 2023-10-02T10:00:00+02:00
+  phases:
+  - phase: New Phase
+  riskProfile: Default risk profile
+  author: admin
+  defaultTargetFolder: ./

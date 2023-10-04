@@ -1,55 +1,15 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Mon Oct 02 09:30:52 CEST 2023
+# Date created:         Wed Oct 04 09:33:16 CEST 2023
 
----
-apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: aa
-spec:
-- directory: bbb
-  children:
-  - directory: cc
-    children:
-    - template: cc_under_bbb
-      scheduledStartDate: 2023-10-02T09:00:00+02:00
-      phases:
-      - phase: New Phase
-      riskProfile: Default risk profile
-      author: admin
-      defaultTargetFolder: ./bbb/cc
 ---
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
-  home: aa
+  home: aa/bbb
 spec:
-- directory: bbb/cc
+- directory: "."
   teams:
-  - name: Folder Owner
-    users:
-    - admin
-    permissions:
-    - folder#edit_variables
-    - delivery_pattern#edit
-    - folder#edit_configuration
-    - delivery#edit
-    - folder#view_versions
-    - folder#apply_changes
-    - group#view
-    - folder#edit_versions
-    - folder#edit_notifications
-    - delivery_pattern#view
-    - group#edit
-    - delivery#view
-    - delivery#edit_tracked_item
-    - folder#view
-    - folder#edit_security
-    - dashboard#edit
-    - folder#edit
-    - dashboard#view
-    - folder#generate_configuration
   - name: Release Admin
     users:
     - admin
@@ -97,3 +57,26 @@ spec:
     - template#edit_triggers
     - template#edit_precondition
     - template#edit_failure_handler
+  - name: Folder Owner
+    users:
+    - admin
+    permissions:
+    - folder#edit_variables
+    - delivery_pattern#edit
+    - folder#edit_configuration
+    - delivery#edit
+    - folder#view_versions
+    - folder#apply_changes
+    - group#view
+    - folder#edit_versions
+    - folder#edit_notifications
+    - delivery_pattern#view
+    - group#edit
+    - delivery#view
+    - delivery#edit_tracked_item
+    - folder#view
+    - folder#edit_security
+    - dashboard#edit
+    - folder#edit
+    - dashboard#view
+    - folder#generate_configuration

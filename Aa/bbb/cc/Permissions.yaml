@@ -1,55 +1,15 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Mon Oct 02 09:30:52 CEST 2023
+# Date created:         Wed Oct 04 09:33:16 CEST 2023
 
----
-apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: Aa
-spec:
-- directory: bbb
-  children:
-  - directory: cc
----
-apiVersion: xl-release/v1
-kind: Import
-metadata:
-  home: aa
-spec:
-  imports:
-  - cc/Releasefile.yaml
 ---
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
-  home: aa
+  home: aa/bbb/cc
 spec:
-- directory: bbb
+- directory: "."
   teams:
-  - name: Folder Owner
-    users:
-    - admin
-    permissions:
-    - folder#edit_variables
-    - delivery_pattern#edit
-    - folder#edit_configuration
-    - delivery#edit
-    - folder#view_versions
-    - folder#apply_changes
-    - group#view
-    - folder#edit_versions
-    - folder#edit_notifications
-    - delivery_pattern#view
-    - group#edit
-    - delivery#view
-    - delivery#edit_tracked_item
-    - folder#view
-    - folder#edit_security
-    - dashboard#edit
-    - folder#edit
-    - dashboard#view
-    - folder#generate_configuration
   - name: Release Admin
     users:
     - admin
@@ -82,6 +42,29 @@ spec:
     - release#edit_blackout
     - release#edit_failure_handler
     - release#abort
+  - name: Folder Owner
+    users:
+    - admin
+    permissions:
+    - folder#edit_variables
+    - delivery_pattern#edit
+    - folder#edit_configuration
+    - delivery#edit
+    - folder#view_versions
+    - folder#apply_changes
+    - group#view
+    - folder#edit_versions
+    - folder#edit_notifications
+    - delivery_pattern#view
+    - group#edit
+    - delivery#view
+    - delivery#edit_tracked_item
+    - folder#view
+    - folder#edit_security
+    - dashboard#edit
+    - folder#edit
+    - dashboard#view
+    - folder#generate_configuration
   - name: Template Owner
     users:
     - admin
