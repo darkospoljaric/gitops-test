@@ -1,6 +1,6 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Mon Oct 09 15:36:51 CEST 2023
+# Date created:         Mon Oct 09 16:22:38 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -8,16 +8,14 @@ kind: Templates
 metadata:
   home: f1/f2/f33
 spec:
-- directory: f1
+- directory: f2
   children:
-  - directory: f2
+  - directory: f33
     children:
-    - directory: f33
-      children:
-      - template: f33t
-        scheduledStartDate: 2023-10-06T09:00:00+02:00
-        phases:
-        - phase: New Phase
-        riskProfile: Default risk profile
-        author: admin
-        defaultTargetFolder: ./
+    - template: f33t
+      scheduledStartDate: 2023-10-06T09:00:00+02:00
+      phases:
+      - phase: New Phase
+      riskProfile: Default risk profile
+      author: admin
+      defaultTargetFolder: ./
