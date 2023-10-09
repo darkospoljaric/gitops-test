@@ -1,0 +1,12 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Mon Oct 09 15:36:51 CEST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Import
+spec:
+  imports:
+  - Notifications.yaml
+  - Permissions.yaml
+  - Template_f33t.yaml

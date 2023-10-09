@@ -1,0 +1,19 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Mon Oct 09 15:36:51 CEST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Import
+spec:
+  imports:
+  - Connections.yaml
+  - Dashboard_f1dash.yaml
+  - Notifications.yaml
+  - Pattern_f1p.yaml
+  - Permissions.yaml
+  - Template_f1t.yaml
+  - Trigger_f1trig1.yaml
+  - Variables.yaml
+  - f2/Releasefile.yaml
+  - f22/Releasefile.yaml
