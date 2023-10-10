@@ -8,7 +8,7 @@ kind: Permissions
 metadata:
   home: f1
 spec:
-- directory: f2/f3/f4
+- directory: f2/f3/f444
   teams:
   - name: Template Owner
     users:

@@ -1,12 +1,12 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Tue Oct 10 11:07:03 CEST 2023
+# Date created:         Tue Oct 10 13:34:03 CEST 2023
 
 ---
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: f1/f22
+  home: f1
 spec:
 - directory: f22
   children:
@@ -17,4 +17,4 @@ spec:
     - phase: New Phase
     riskProfile: Default risk profile
     author: admin
-    defaultTargetFolder: f1
+    defaultTargetFolder: ./
