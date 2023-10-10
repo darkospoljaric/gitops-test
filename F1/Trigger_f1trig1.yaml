@@ -1,6 +1,6 @@
-# Exported from:        http://MarioMijicsiPad:5516/
+# Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Mon Oct 09 16:22:38 CEST 2023
+# Date created:         Tue Oct 10 09:31:59 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -8,13 +8,11 @@ kind: Templates
 metadata:
   home: f1
 spec:
-- directory: f1
-  children:
-  - name: f1trig1
-    type: time.Schedule
-    releaseTitle: f1t_trig
-    template: f1t
-    releaseFolder: ./
-    pollType: REPEAT
-    periodicity: "100000"
-    triggerTime: 2023-10-06T09:23:03.290000
+- name: f1trig1
+  type: time.Schedule
+  releaseTitle: f1t_trig
+  template: f1t
+  releaseFolder: ./
+  pollType: REPEAT
+  periodicity: "100000"
+  triggerTime: 2023-10-06T09:23:03.290000
