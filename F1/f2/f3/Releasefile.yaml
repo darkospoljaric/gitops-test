@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Tue Oct 10 09:52:24 CEST 2023
+# Date created:         Tue Oct 10 11:07:03 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -12,4 +12,3 @@ spec:
   - Template_f3t.yaml
   - f4/Releasefile.yaml
   - f44/Releasefile.yaml
-  - f444/Releasefile.yaml
