@@ -4,10 +4,8 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: f1
+kind: Import
 spec:
-- pattern: f1p
-  stages:
-  - stage: New Stage
+  imports:
+  - Notifications.yaml
+  - Permissions.yaml

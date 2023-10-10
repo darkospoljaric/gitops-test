@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Tue Oct 10 09:31:59 CEST 2023
+# Date created:         Tue Oct 10 09:52:24 CEST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -16,8 +16,9 @@ spec:
       children:
       - template: f4t
         scheduledStartDate: 2023-10-06T09:00:00+02:00
+        dueDate: 2023-10-06T10:00:00+02:00
         phases:
         - phase: New Phase
         riskProfile: Default risk profile
         author: admin
-        defaultTargetFolder: ./
+        defaultTargetFolder: f1

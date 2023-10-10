@@ -6,7 +6,7 @@
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
-  home: f1/f22
+  home: f1/f2/f3/f444
 spec:
 - directory: "."
   teams:
