@@ -9,5 +9,3 @@ spec:
   imports:
   - Permissions.yaml
   - Templates.yaml
-  - f3/Releasefile.yaml
-  - f33/Releasefile.yaml

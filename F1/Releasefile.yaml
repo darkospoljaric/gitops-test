@@ -14,5 +14,3 @@ spec:
   - Templates.yaml
   - Triggers.yaml
   - Variables.yaml
-  - f2/Releasefile.yaml
-  - f22/Releasefile.yaml
