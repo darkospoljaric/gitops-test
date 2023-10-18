@@ -18,6 +18,4 @@ spec:
   children:
   - directory: f3
     children:
-    - directory: f44
-      children:
-      - directory: f444
+    - directory: f444
