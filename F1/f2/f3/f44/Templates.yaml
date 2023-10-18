@@ -12,15 +12,13 @@ spec:
   children:
   - directory: f3
     children:
-    - directory: f4
+    - directory: f44
       children:
-      - directory: f44
-        children:
-        - template: f44t
-          scheduledStartDate: 2023-10-06T09:00:00+02:00
-          dueDate: 2023-10-06T10:00:00+02:00
-          phases:
-          - phase: New Phase
-          riskProfile: Default risk profile
-          author: admin
-          defaultTargetFolder: ./
+      - template: f44t
+        scheduledStartDate: 2023-10-06T09:00:00+02:00
+        dueDate: 2023-10-06T10:00:00+02:00
+        phases:
+        - phase: New Phase
+        riskProfile: Default risk profile
+        author: admin
+        defaultTargetFolder: ./

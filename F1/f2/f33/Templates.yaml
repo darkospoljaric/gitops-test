@@ -10,21 +10,13 @@ metadata:
 spec:
 - directory: f2
   children:
-  - directory: f3
+  - directory: f33
     children:
-    - directory: f4
-      children:
-      - directory: f44
-        children:
-        - directory: f444
-          children:
-          - directory: f33
-            children:
-            - template: f33t
-              scheduledStartDate: 2023-10-06T09:00:00+02:00
-              dueDate: 2023-10-06T10:00:00+02:00
-              phases:
-              - phase: New Phase
-              riskProfile: Default risk profile
-              author: admin
-              defaultTargetFolder: ./
+    - template: f33t
+      scheduledStartDate: 2023-10-06T09:00:00+02:00
+      dueDate: 2023-10-06T10:00:00+02:00
+      phases:
+      - phase: New Phase
+      riskProfile: Default risk profile
+      author: admin
+      defaultTargetFolder: ./
