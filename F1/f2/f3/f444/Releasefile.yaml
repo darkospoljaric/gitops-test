@@ -14,10 +14,10 @@ kind: Templates
 metadata:
   home: f1
 spec:
-  - directory: f2
+- directory: f2
+  children:
+  - directory: f3
     children:
-      - directory: f3
-        children:
-          - directory: f44
-            children:
-              - directory: f444
+    - directory: f44
+      children:
+      - directory: f444
