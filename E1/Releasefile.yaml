@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Fri Jan 05 15:35:48 CET 2024
+# Date created:         Fri Jan 05 15:37:58 CET 2024
 
 ---
 apiVersion: xl-release/v1
@@ -17,6 +17,7 @@ metadata:
 spec:
 - directory: "."
   teams:
+  - name: tim_e1
   - name: Release Admin
     users:
     - admin
@@ -26,7 +27,6 @@ spec:
     - workflow#view_execution
     - release#advance_task_transition
     - workflow#abort_execution
-    - release#edit_security
     - release#restart_phase
     - release#lock_task
     - folder#view
@@ -54,16 +54,14 @@ spec:
     users:
     - admin
     permissions:
+    - template#create_release_other_folder
     - template#edit
     - trigger#view_trigger
-    - app_pipelines#view
-    - template#edit_security
-    - template#create_release
-    - template#create_release_other_folder
     - template#lock_task
     - template#view
+    - app_pipelines#view
     - folder#view
-    - template#edit_triggers
+    - template#create_release
     - template#edit_precondition
     - template#edit_failure_handler
   - name: Folder Owner
