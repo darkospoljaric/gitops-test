@@ -1,16 +1,7 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Fri Jan 05 15:54:11 CET 2024
+# Date created:         Fri Jan 05 16:05:49 CET 2024
 
----
-apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: E1
-spec:
-- directory: e2
-  children:
-  - directory: e3
 ---
 apiVersion: xl-release/v1
 kind: Permissions
@@ -51,7 +42,6 @@ spec:
     - release#start
     - release#edit_failure_handler
     - release#abort
-  - name: tim_e1
   - name: Template Owner
     users:
     - admin
@@ -91,3 +81,4 @@ spec:
     - folder#edit
     - dashboard#view
     - folder#generate_configuration
+  - name: tim_e1
