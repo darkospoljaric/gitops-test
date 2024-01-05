@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Fri Jan 05 15:37:58 CET 2024
+# Date created:         Fri Jan 05 15:54:11 CET 2024
 
 ---
 apiVersion: xl-release/v1
@@ -17,7 +17,6 @@ metadata:
 spec:
 - directory: "."
   teams:
-  - name: tim_e1
   - name: Release Admin
     users:
     - admin
@@ -50,6 +49,7 @@ spec:
     - release#start
     - release#edit_failure_handler
     - release#abort
+  - name: tim_e1
   - name: Template Owner
     users:
     - admin
