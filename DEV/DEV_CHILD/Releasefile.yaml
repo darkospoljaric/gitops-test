@@ -1,17 +1,10 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Wed Jan 10 16:09:01 CET 2024
+# Date created:         Mon Jan 15 16:37:42 CET 2024
 
 ---
 apiVersion: xl-release/v1
-kind: Templates
-metadata:
-  home: DEV
+kind: Import
 spec:
-- template: t1
-  scheduledStartDate: 2024-01-10T09:00:00+01:00
-  phases:
-  - phase: New Phase
-  riskProfile: Default risk profile
-  author: admin
-- directory: DEV_CHILD
+  imports:
+  - Permissions.yaml
