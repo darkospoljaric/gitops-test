@@ -1,10 +1,10 @@
-# Exported from:        http://MarioMijicsiPad:5516/
+# Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Mon Jan 15 16:37:42 CET 2024
+# Date created:         Tue Jan 16 14:47:46 CET 2024
 
 ---
 apiVersion: xl-release/v1
 kind: Import
 spec:
   imports:
-  - Permissions.yaml
+  - Template_d1.yaml
