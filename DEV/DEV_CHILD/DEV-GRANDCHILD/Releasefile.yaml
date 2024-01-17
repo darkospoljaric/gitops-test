@@ -7,5 +7,5 @@ apiVersion: xl-release/v1
 kind: Import
 spec:
   imports:
-  - Template_asd.yaml
+  - Template_grand_Tempalte.yaml
   - Variables.yaml

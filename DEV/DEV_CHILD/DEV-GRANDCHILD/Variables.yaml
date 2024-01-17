@@ -1,0 +1,15 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Wed Jan 17 16:37:34 CET 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: DEV/DEV_CHILD/DEV-GRANDCHILD
+spec:
+- folderVariables:
+  - type: xlrelease.StringVariable
+    key: folder.dev_grandchild_var
+  - type: xlrelease.StringVariable
+    key: folder.dev_grandchild_var2

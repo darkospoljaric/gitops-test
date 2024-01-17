@@ -4,8 +4,12 @@
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: DEV
 spec:
-  imports:
-  - Template_asd.yaml
-  - Variables.yaml
+- folderVariables:
+  - type: xlrelease.StringVariable
+    key: folder.devvar
+  - type: xlrelease.StringVariable
+    key: folder.devvar2

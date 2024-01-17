@@ -2,10 +2,3 @@
 # Release version:      23.1.0
 # Date created:         Wed Jan 17 16:37:34 CET 2024
 
----
-apiVersion: xl-release/v1
-kind: Import
-spec:
-  imports:
-  - Template_asd.yaml
-  - Variables.yaml
