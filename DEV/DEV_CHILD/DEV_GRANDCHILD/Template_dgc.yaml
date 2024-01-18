@@ -1,12 +1,12 @@
-# Exported from:        http://Darkos-MBP.home:5516/
+# Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Wed Jan 17 23:38:13 CET 2024
+# Date created:         Thu Jan 18 09:57:17 CET 2024
 
 ---
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: DEV/DEV_CHILD/DEV_GRANDCHILD
+  home: DEV_CHILD/DEV_GRANDCHILD
 spec:
 - template: dgc
   scheduledStartDate: 2024-01-17T09:00:00+01:00
