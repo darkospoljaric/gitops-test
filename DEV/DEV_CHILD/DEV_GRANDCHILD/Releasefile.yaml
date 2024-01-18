@@ -1,10 +1,4 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Thu Jan 18 09:57:17 CET 2024
+# Date created:         Thu Jan 18 11:38:42 CET 2024
 
----
-apiVersion: xl-release/v1
-kind: Import
-spec:
-  imports:
-  - Template_dgc.yaml
