@@ -1,10 +1,10 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      23.1.0
-# Date created:         Mon Jan 22 21:27:38 CET 2024
+# Date created:         Tue Jan 23 16:00:35 CET 2024
 
 ---
 apiVersion: xl-release/v1
 kind: Import
 spec:
   imports:
-  - Template_dgc.yaml
+  - Permissions.yaml
