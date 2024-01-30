@@ -6,7 +6,7 @@
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
-  path: /
+  path: mango_child
 spec:
 - directory: "."
   teams:
