@@ -6,9 +6,9 @@
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  path: /
+  path: coconut-child
 spec:
-- template: c1
+- template: cc
   scheduledStartDate: 2024-02-01T09:00:00+01:00
   dueDate: 2024-02-01T10:00:00+01:00
   phases:
