@@ -6,24 +6,10 @@
 apiVersion: xl-release/v1
 kind: Permissions
 metadata:
-  path: /
+  path: mango_child/mango_grandchild
 spec:
 - directory: "."
   teams:
-  - name: Template Owner
-    users:
-    - admin
-    permissions:
-    - template#create_release_other_folder
-    - template#edit
-    - trigger#view_trigger
-    - template#lock_task
-    - template#view
-    - app_pipelines#view
-    - folder#view
-    - template#create_release
-    - template#edit_precondition
-    - template#edit_failure_handler
   - name: Folder Owner
     users:
     - admin
@@ -81,3 +67,17 @@ spec:
     - release#start
     - release#edit_failure_handler
     - release#abort
+  - name: Template Owner
+    users:
+    - admin
+    permissions:
+    - template#create_release_other_folder
+    - template#edit
+    - trigger#view_trigger
+    - template#lock_task
+    - template#view
+    - app_pipelines#view
+    - folder#view
+    - template#create_release
+    - template#edit_precondition
+    - template#edit_failure_handler

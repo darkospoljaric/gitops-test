@@ -1,6 +1,6 @@
-# Exported from:        http://Darkos-MBP.home:5516/
-# Release version:      24.1.0
-# Date created:         Tue Jan 30 11:28:46 CET 2024
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Thu Feb 01 11:05:32 CET 2024
 
 ---
 apiVersion: xl-release/v1
@@ -10,20 +10,6 @@ metadata:
 spec:
 - directory: "."
   teams:
-  - name: Template Owner
-    users:
-    - admin
-    permissions:
-    - template#create_release_other_folder
-    - template#edit
-    - trigger#view_trigger
-    - template#lock_task
-    - template#view
-    - app_pipelines#view
-    - folder#view
-    - template#create_release
-    - template#edit_precondition
-    - template#edit_failure_handler
   - name: Folder Owner
     users:
     - admin
@@ -81,3 +67,17 @@ spec:
     - release#start
     - release#edit_failure_handler
     - release#abort
+  - name: Template Owner
+    users:
+    - admin
+    permissions:
+    - template#create_release_other_folder
+    - template#edit
+    - trigger#view_trigger
+    - template#lock_task
+    - template#view
+    - app_pipelines#view
+    - folder#view
+    - template#create_release
+    - template#edit_precondition
+    - template#edit_failure_handler
