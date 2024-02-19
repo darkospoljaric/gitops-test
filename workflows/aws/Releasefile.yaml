@@ -1,0 +1,10 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      24.1.0-SNAPSHOT
+# Date created:         Mon Feb 19 16:12:59 CET 2024
+
+---
+apiVersion: xl-release/v1
+kind: Import
+spec:
+  imports:
+  - Workflow_Create an AWS Lambda Function using S3 zip file.yaml
