@@ -1,11 +1,48 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Thu Feb 01 11:05:32 CET 2024
+# Date created:         Mon Mar 11 16:41:43 CET 2024
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: test
 spec:
-  imports:
-  - Notifications.yaml
-  - Permissions.yaml
+- name: local
+  type: xlr.Server
+  url: http://localhost:5516
+  username: admin
+  password: !value "xlr_Server_local_password"
+  enableSslVerification: false
+- template: test
+  scheduledStartDate: 2024-03-07T09:00:00+01:00
+  dueDate: 2024-03-07T10:00:00+01:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: gsdg
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
+- directory: mango_child
+  children:
+  - template: mct
+    scheduledStartDate: 2024-03-11T09:00:00+01:00
+    phases:
+    - phase: New Phase
+      tasks:
+      - name: sdg
+        type: xlrelease.Task
+    riskProfile: Default risk profile
+    author: admin
+  - directory: mango_grandchild
+    children:
+    - template: mgct
+      scheduledStartDate: 2024-03-11T09:00:00+01:00
+      phases:
+      - phase: New Phase
+        tasks:
+        - name: asd
+          type: xlrelease.Task
+      riskProfile: Default risk profile
+      author: admin
