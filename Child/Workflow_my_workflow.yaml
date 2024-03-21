@@ -1,0 +1,23 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Thu Mar 21 15:50:02 CET 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: grandparent/parent/child
+spec:
+- template: my_workflow
+  scheduledStartDate: 2024-03-21T09:00:00+01:00
+  dueDate: 2024-03-21T10:00:00+01:00
+  phases:
+  - phase: Workflow tasks
+    tasks:
+    - name: sadg
+      type: xlrelease.Task
+  kind: WORKFLOW
+  disableNotifications: true
+  author: admin
+  defaultTargetFolder: grandparent/parent/child

@@ -7,5 +7,4 @@ apiVersion: xl-release/v1
 kind: Import
 spec:
   imports:
-  - Template_c1.yaml
-  - Workflow_my_workflow.yaml
+  - Template_ccc1.yaml
