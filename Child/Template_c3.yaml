@@ -9,8 +9,11 @@ metadata:
   path: /
   home: grandparent/parent/child
 spec:
-- template: c2
+- template: c3
   scheduledStartDate: 2024-03-21T09:00:00+01:00
   phases:
   - phase: New Phase
+    tasks:
+    - name: "333"
+      type: xlrelease.Task
   riskProfile: Default risk profile
