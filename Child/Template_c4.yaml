@@ -9,15 +9,11 @@ metadata:
   path: /
   home: grandparent/parent/child
 spec:
-- template: my_workflow
+- template: c4
   scheduledStartDate: 2024-03-21T09:00:00+01:00
-  dueDate: 2024-03-21T10:00:00+01:00
   phases:
-  - phase: Workflow tasks
+  - phase: New Phase
     tasks:
-    - name: sadg
+    - name: ggg
       type: xlrelease.Task
-  kind: WORKFLOW
-  disableNotifications: true
-  author: admin
-  defaultTargetFolder: grandparent/parent/child
+  riskProfile: Default risk profile

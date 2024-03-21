@@ -1,6 +1,6 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Thu Mar 21 16:20:53 CET 2024
+# Date created:         Thu Mar 21 16:22:26 CET 2024
 
 ---
 apiVersion: xl-release/v1
@@ -9,5 +9,5 @@ spec:
   imports:
   - Template_c1.yaml
   - Template_c2.yaml
-  - Template_c3.yaml
+  - Template_c4.yaml
   - Workflow_my_workflow.yaml
