@@ -1,6 +1,6 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Thu Mar 21 15:51:31 CET 2024
+# Date created:         Thu Mar 21 15:51:32 CET 2024
 
 ---
 apiVersion: xl-release/v1
@@ -9,12 +9,11 @@ metadata:
   path: c1
   home: grandparent/parent/child/c1
 spec:
-- template: ccc1
-  scheduledStartDate: 2024-03-13T09:00:00+01:00
-  dueDate: 2024-03-13T10:00:00+01:00
+- template: cccc2
+  scheduledStartDate: 2024-03-21T09:00:00+01:00
   phases:
   - phase: New Phase
     tasks:
-    - name: sadf
+    - name: gg
       type: xlrelease.Task
   riskProfile: Default risk profile
