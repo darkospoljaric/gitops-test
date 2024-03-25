@@ -1,0 +1,20 @@
+# Exported from:        http://MarioMijicsiPad:5516/
+# Release version:      23.1.0
+# Date created:         Tue Mar 12 10:14:05 CET 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: mango_child
+spec:
+- template: mct
+  scheduledStartDate: 2024-03-11T09:00:00+01:00
+  dueDate: 2024-03-11T10:00:00+01:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: sdg
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin

@@ -1,11 +1,10 @@
 # Exported from:        http://MarioMijicsiPad:5516/
 # Release version:      23.1.0
-# Date created:         Tue Mar 12 10:14:05 CET 2024
+# Date created:         Fri Mar 15 11:19:59 CET 2024
 
 ---
 apiVersion: xl-release/v1
 kind: Import
 spec:
   imports:
-  - Connections.yaml
-  - Template_test.yaml
+  - Templates.yaml
