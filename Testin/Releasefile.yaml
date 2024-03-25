@@ -8,3 +8,4 @@ kind: Import
 spec:
   imports:
   - Template_test-template.yaml
+  - Template_test-template2.yaml
