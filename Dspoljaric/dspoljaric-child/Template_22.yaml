@@ -1,0 +1,17 @@
+# Exported from:        http://xl-release-nightly.xebialabs.com:5516/
+# Release version:      24.1.0-319.113
+# Date created:         Tue Apr 02 13:18:46 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: dspoljaric-child
+  home: dspoljaric/dspoljaric-child
+spec:
+- template: "22"
+  scheduledStartDate: 2024-04-02T09:00:00+02:00
+  phases:
+  - phase: New Phase
+  riskProfile: Default risk profile
+  author: admin
