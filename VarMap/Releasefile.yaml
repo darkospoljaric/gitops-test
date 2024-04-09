@@ -1,0 +1,60 @@
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Tue Apr 09 16:40:24 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: var-map
+spec:
+- template: included
+  scheduledStartDate: 2024-04-09T09:00:00+02:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: asdgf
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+  variables:
+  - type: xlrelease.ListStringVariable
+    key: included-var
+    requiresValue: false
+    showOnReleaseStart: false
+    value:
+    - "1"
+    - "2"
+    - "3"
+  - type: xlrelease.StringVariable
+    key: var1
+    valueProvider:
+      type: test.TestValueProvider
+  riskProfile: Default risk profile
+  author: admin
+- template: parent
+  scheduledStartDate: 2024-04-09T09:00:00+02:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: create-rel
+      type: xlrelease.CreateReleaseTask
+      variableMapping:
+        templateVariables[0].value: "${parent-list}"
+      newReleaseTitle: included-title
+      templateVariables:
+      - type: xlrelease.StringVariable
+        key: var1
+      template: ./included
+  variables:
+  - type: xlrelease.StringVariable
+    key: parent-list
+    requiresValue: false
+    showOnReleaseStart: false
+    valueProvider:
+      type: xlrelease.ListOfStringValueProviderConfiguration
+      values:
+      - "1"
+      - "2"
+      - "3"
+  riskProfile: Default risk profile
+  author: admin
