@@ -1,0 +1,20 @@
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Wed Apr 10 14:19:09 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: dev
+spec:
+- template: test-template
+  scheduledStartDate: 2024-04-10T09:00:00+02:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: asdg
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin

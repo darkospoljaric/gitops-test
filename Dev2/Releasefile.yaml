@@ -1,0 +1,10 @@
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Wed Apr 10 14:19:09 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Import
+spec:
+  imports:
+  - Template_test-template.yaml
