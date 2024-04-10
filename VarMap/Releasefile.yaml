@@ -1,6 +1,6 @@
-# Exported from:        http://Darkos-MBP.home:5517/
-# Release version:      24.1.0-319.113
-# Date created:         Wed Apr 10 13:13:03 CEST 2024
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Wed Apr 10 13:38:56 CEST 2024
 
 ---
 apiVersion: xl-release/v1
@@ -8,63 +8,92 @@ kind: Templates
 metadata:
   home: var-map
 spec:
-- template: child
+- template: dijete
   scheduledStartDate: 2024-04-10T09:00:00+02:00
   phases:
   - phase: New Phase
     tasks:
-    - name: print vars
+    - name: print valyoohs
       type: xlrelease.ScriptTask
-      script: "print ${lisbtoc}"
+      script: |-
+        print ${text-var}
+        print ${bool-var}
+        print ${list-var}
+    color: '#3d6c9e'
   variables:
   - type: xlrelease.StringVariable
-    key: lisbtoc
-    label: mylab
+    key: list-var
+    label: list-var
     valueProvider:
       type: xlrelease.ListOfStringValueProviderConfiguration
       values:
       - "1"
       - "2"
       - "3"
-    value: "1"
+  - type: xlrelease.StringVariable
+    key: bool-var
+    label: Script
+    description: Script
+  - type: xlrelease.StringVariable
+    key: text-var
+    label: Script
+    description: Script
   riskProfile: Default risk profile
   author: admin
-- template: parent
+- template: roditelj
   scheduledStartDate: 2024-04-10T09:00:00+02:00
   phases:
   - phase: New Phase
     tasks:
-    - name: enter value
+    - name: enter-values
       type: xlrelease.UserInputTask
-      description: Please enter the required information below.
+      owner: admin
       variables:
-      - somevar
-      - somelist
-    - name: start-child
+      - bool-var
+      - text-var
+      - parent-list
+    - name: dfgf
       type: xlrelease.CreateReleaseTask
       variableMapping:
-        templateVariables[0].value: "${somelist}"
-      newReleaseTitle: cchild-title
+        templateVariables[0].value: "${parent-list}"
+      newReleaseTitle: some-title
       templateVariables:
       - type: xlrelease.StringVariable
-        key: lisbtoc
-        label: mylab
-      template: ./child
+        key: list-var
+        label: list-var
+      - type: xlrelease.StringVariable
+        key: bool-var
+        label: Script
+        description: Script
+        value: "1"
+      - type: xlrelease.StringVariable
+        key: text-var
+        label: Script
+        description: Script
+        value: "1"
+      template: ./dijete
   variables:
   - type: xlrelease.StringVariable
-    key: somevar
+    key: parent-list
     requiresValue: false
     showOnReleaseStart: false
-  - type: xlrelease.StringVariable
-    key: somelist
-    requiresValue: false
     valueProvider:
       type: xlrelease.ListOfStringValueProviderConfiguration
       values:
       - "1"
       - "2"
       - "3"
+  - type: xlrelease.StringVariable
+    key: text-var
+    requiresValue: false
+    showOnReleaseStart: false
+    label: text-var
+  - type: xlrelease.BooleanVariable
+    key: bool-var
+    requiresValue: false
+    showOnReleaseStart: false
+    label: bool-var
   scriptUsername: admin
-  scriptUserPassword: !value "xlrelease_Release_parent_scriptUserPassword"
+  scriptUserPassword: !value "xlrelease_Release_roditelj_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin
