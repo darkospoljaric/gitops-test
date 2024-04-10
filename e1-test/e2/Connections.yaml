@@ -1,0 +1,15 @@
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Wed Apr 10 14:09:22 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: e1
+spec:
+- name: asd
+  type: git.Repository
+  url: http://localhost
+  authenticationMethod: None
