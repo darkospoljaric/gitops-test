@@ -1,6 +1,6 @@
-# Exported from:        http://Darkos-MBP.home:5516/
-# Release version:      24.1.0
-# Date created:         Tue Apr 09 16:40:24 CEST 2024
+# Exported from:        http://Darkos-MBP.home:5517/
+# Release version:      24.1.0-319.113
+# Date created:         Wed Apr 10 13:13:03 CEST 2024
 
 ---
 apiVersion: xl-release/v1
@@ -8,53 +8,63 @@ kind: Templates
 metadata:
   home: var-map
 spec:
-- template: included
-  scheduledStartDate: 2024-04-09T09:00:00+02:00
+- template: child
+  scheduledStartDate: 2024-04-10T09:00:00+02:00
   phases:
   - phase: New Phase
     tasks:
-    - name: asdgf
-      type: xlrelease.UserInputTask
-      description: Please enter the required information below.
-  variables:
-  - type: xlrelease.ListStringVariable
-    key: included-var
-    requiresValue: false
-    showOnReleaseStart: false
-    value:
-    - "1"
-    - "2"
-    - "3"
-  - type: xlrelease.StringVariable
-    key: var1
-    valueProvider:
-      type: test.TestValueProvider
-  riskProfile: Default risk profile
-  author: admin
-- template: parent
-  scheduledStartDate: 2024-04-09T09:00:00+02:00
-  phases:
-  - phase: New Phase
-    tasks:
-    - name: create-rel
-      type: xlrelease.CreateReleaseTask
-      variableMapping:
-        templateVariables[0].value: "${parent-list}"
-      newReleaseTitle: included-title
-      templateVariables:
-      - type: xlrelease.StringVariable
-        key: var1
-      template: ./included
+    - name: print vars
+      type: xlrelease.ScriptTask
+      script: "print ${lisbtoc}"
   variables:
   - type: xlrelease.StringVariable
-    key: parent-list
-    requiresValue: false
-    showOnReleaseStart: false
+    key: lisbtoc
+    label: mylab
     valueProvider:
       type: xlrelease.ListOfStringValueProviderConfiguration
       values:
       - "1"
       - "2"
       - "3"
+    value: "1"
+  riskProfile: Default risk profile
+  author: admin
+- template: parent
+  scheduledStartDate: 2024-04-10T09:00:00+02:00
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: enter value
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+      variables:
+      - somevar
+      - somelist
+    - name: start-child
+      type: xlrelease.CreateReleaseTask
+      variableMapping:
+        templateVariables[0].value: "${somelist}"
+      newReleaseTitle: cchild-title
+      templateVariables:
+      - type: xlrelease.StringVariable
+        key: lisbtoc
+        label: mylab
+      template: ./child
+  variables:
+  - type: xlrelease.StringVariable
+    key: somevar
+    requiresValue: false
+    showOnReleaseStart: false
+  - type: xlrelease.StringVariable
+    key: somelist
+    requiresValue: false
+    valueProvider:
+      type: xlrelease.ListOfStringValueProviderConfiguration
+      values:
+      - "1"
+      - "2"
+      - "3"
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_parent_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin
