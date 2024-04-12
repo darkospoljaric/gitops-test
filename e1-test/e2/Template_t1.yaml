@@ -1,0 +1,20 @@
+# Exported from:        http://Darkos-MBP.home:5516/
+# Release version:      24.1.0
+# Date created:         Fri Apr 12 14:49:54 CEST 2024
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: e1
+spec:
+- template: t1
+  scheduledStartDate: 2024-04-09T09:00:00+02:00
+  dueDate: 2024-04-09T10:00:00+02:00
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_t1_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
