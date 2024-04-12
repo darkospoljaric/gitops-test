@@ -1,6 +1,6 @@
 # Exported from:        http://Darkos-MBP.home:5516/
 # Release version:      24.1.0
-# Date created:         Fri Apr 12 14:49:54 CEST 2024
+# Date created:         Fri Apr 12 14:58:11 CEST 2024
 
 ---
 apiVersion: xl-release/v1
@@ -10,4 +10,3 @@ spec:
   - Connections.yaml
   - Permissions.yaml
   - Template_t1.yaml
-  - Template_t2.yaml
